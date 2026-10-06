@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Manrope, Urbanist } from "next/font/google";
 import "./globals.css";
 import "./icons.css";
+import "./chrome.css";
 
 const manrope = Manrope({
   variable: "--font-body",
