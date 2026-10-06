@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Manrope, Urbanist } from "next/font/google";
 import "./globals.css";
+import "./base.css";
 import "./icons.css";
 import "./chrome.css";
 

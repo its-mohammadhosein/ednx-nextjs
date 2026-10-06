@@ -44,3 +44,26 @@ body {
   color: var(--color-text-body);
   font-family: var(--font-sans);
 }
+
+/**
+ * Plain-CSS infinite marquee, replacing the template's custom rAF scroll
+ * script. New addition — doesn't exist in the original CSS.
+ */
+.tj-marquee-wrapper-track {
+  overflow: hidden;
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation-name: marquee-scroll;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
