@@ -19,6 +19,7 @@ export default function AboutPage() {
   return (
     <>
       <PageBanner
+        variant="rich"
         crumbs={[{ label: "About us" }]}
         subtitle="About our Platform"
         title={<>Empowering Our Learner into <span>Career-focused</span> Online Education.</>}
