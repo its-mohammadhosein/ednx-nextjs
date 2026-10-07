@@ -1,15 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-
-export type Coach = {
-  slug: string;
-  image: string;
-  name: string;
-  designation: string;
-  rating: number;
-  sessions: string;
-  pricePerHour: string;
-};
+import type { Coach } from "@/data/coaches";
 
 /**
  * Distinct card design from the home page's InstructorCard/tj-instructor-item

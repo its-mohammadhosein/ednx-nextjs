@@ -3,7 +3,7 @@
  * per-star fill percentage, so e.g. a 4.6 rating partially fills the 5th
  * star rather than rounding to a whole star.
  */
-export default function StarRating({ rating }: { rating: number }) {
+export default function StarRating({ rating, label }: { rating: number; label?: string }) {
   const stars = [0, 1, 2, 3, 4].map((i) => {
     const fill = Math.max(0, Math.min(1, rating - i)) * 100;
     return fill;
@@ -21,6 +21,7 @@ export default function StarRating({ rating }: { rating: number }) {
           </div>
         </div>
       ))}
+      {label && <span className="label">{label}</span>}
     </div>
   );
 }

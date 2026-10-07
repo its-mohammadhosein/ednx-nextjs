@@ -1,13 +1,11 @@
 import Link from "next/link";
 import FlipText from "@/components/ui/FlipText";
-import InstructorCardCompact, { type Coach } from "@/components/instructors/InstructorCardCompact";
+import InstructorCardCompact from "@/components/instructors/InstructorCardCompact";
+import { coaches } from "@/data/coaches";
 
-const coaches: Coach[] = [
-  { slug: "devoin-lanee", image: "/images/instructor/instructor-4.webp", name: "Devoin Lanee", designation: "Chief design director", rating: 4.9, sessions: "200", pricePerHour: "$20" },
-  { slug: "dianne-russell", image: "/images/instructor/instructor-5.webp", name: "Dianne Russell", designation: "Chief design director", rating: 4.9, sessions: "210", pricePerHour: "$18" },
-  { slug: "marvin-mckinney", image: "/images/instructor/instructor-6.webp", name: "Marvin McKinney", designation: "Chief design director", rating: 4.9, sessions: "180", pricePerHour: "$25" },
-  { slug: "darrell-steward", image: "/images/instructor/instructor-7.webp", name: "Darrell Steward", designation: "Chief design director", rating: 4.9, sessions: "170", pricePerHour: "$15" },
-];
+// About page shows only the first 4 of the 6 coaches the full /instructors
+// listing has, matching the source markup.
+const featuredCoaches = coaches.slice(0, 4);
 
 export default function AboutInstructors() {
   return (
@@ -25,7 +23,7 @@ export default function AboutInstructors() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {coaches.map((coach) => (
+          {featuredCoaches.map((coach) => (
             <InstructorCardCompact coach={coach} key={coach.slug} />
           ))}
         </div>

@@ -1,6 +1,6 @@
 "use client";
 
-const activeFilters = ["Design", "Development", "4.5 & up", "Discounted"];
+import ActiveFilterChips from "./ActiveFilterChips";
 
 /**
  * Presentational only — search/category/price/level/rating/instructor
@@ -119,16 +119,7 @@ export default function CoursesToolbar({
           </div>
         </div>
       </div>
-      <div className="course-active-filters-wrap">
-        <div className="course-active-filters">
-          <span>Active:</span>
-          {activeFilters.map((filter) => (
-            <span className="filter-active" key={filter}>
-              {filter}<span className="close"><i className="tji-close" /></span>
-            </span>
-          ))}
-        </div>
-      </div>
+      <ActiveFilterChips />
     </>
   );
 }
