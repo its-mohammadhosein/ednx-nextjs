@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <ClientLogos />
+      <ClientLogos scrollAnchorId="scroll-target" />
       <Categories />
       <CoursesSection />
       <About />

@@ -2,9 +2,18 @@ import Image from "next/image";
 import type { Testimonial } from "@/data/testimonials";
 import StarRating from "@/components/ui/StarRating";
 
-export default function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
+export default function TestimonialCard({
+  testimonial,
+  hiredAt,
+  variantClassName = "",
+}: {
+  testimonial: Testimonial;
+  /** About page's variant adds a "Hired at X" badge — home page's doesn't. */
+  hiredAt?: string;
+  variantClassName?: string;
+}) {
   return (
-    <div className={`tj-testimonial-item ${testimonial.themeClass}`}>
+    <div className={`tj-testimonial-item ${testimonial.themeClass} ${variantClassName}`}>
       <div className="tj-testimonial-top">
         <div className="tj-quote"><i className="tji-quote" /></div>
         <StarRating rating={testimonial.rating} />
@@ -20,6 +29,7 @@ export default function TestimonialCard({ testimonial }: { testimonial: Testimon
             <span className="designation">{testimonial.designation}</span>
           </div>
         </div>
+        {hiredAt && <div className="hired"><span><i className="tji-check" /></span>Hired at {hiredAt}</div>}
       </div>
     </div>
   );
