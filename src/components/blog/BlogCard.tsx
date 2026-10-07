@@ -23,6 +23,7 @@ export default function BlogCard({ post }: { post: BlogPost }) {
         <h3 className="blog-title">
           <Link href={`/blog/${post.slug}`}>{post.title}</Link>
         </h3>
+        {post.desc && <p className="blog-desc">{post.desc}</p>}
         <div className="blog-btn">
           <Link className="tj-text-btn flip-text-wrap" href={`/blog/${post.slug}`}>
             <FlipText>Read more</FlipText>

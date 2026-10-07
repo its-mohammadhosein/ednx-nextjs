@@ -19,7 +19,7 @@ export default function BlogPreview() {
         </div>
 
         <div className="tj-blog-wrap">
-          {blogPosts.map((post) => (
+          {blogPosts.slice(0, 3).map((post) => (
             <BlogCard post={post} key={post.slug} />
           ))}
         </div>
