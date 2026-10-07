@@ -1,4 +1,5 @@
 import Link from "next/link";
+import FlipText from "@/components/ui/FlipText";
 
 const categories = [
   { icon: "tji-categories-1", bg: "tj-theme-bg-2", title: "Graphic design", count: "06 courses" },
@@ -24,7 +25,7 @@ export default function Categories() {
             </div>
             <div>
               <Link className="tj-btn-primary flip-text-wrap" href="/courses">
-                <span className="btn-text">Start learning free</span>
+                <FlipText>Start learning free</FlipText>
                 <span className="btn-icon"><i className="tji-arrow-right-2" /></span>
               </Link>
             </div>
@@ -40,7 +41,7 @@ export default function Categories() {
                 <div className="courses">{cat.count}</div>
                 <div className="btn-area tj-border-top">
                   <Link className="tj-text-btn flip-text-wrap" href="/courses">
-                    <span className="btn-text">Start learning</span>
+                    <FlipText>Start learning</FlipText>
                     <span className="btn-icon"><i className="tji-arrow-right-2" /></span>
                   </Link>
                 </div>

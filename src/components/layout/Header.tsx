@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { navItems } from "@/lib/nav-data";
+import FlipText from "@/components/ui/FlipText";
 
 const PROMO_END_DATE = new Date("2026-12-30T12:00:00");
 
@@ -150,7 +151,7 @@ export default function Header({ onOpenMenu }: { onOpenMenu: () => void }) {
                   className="tj-btn-primary tj-btn-primary-border tj-btn-primary-border-sm flip-text-wrap"
                   href="/login"
                 >
-                  <span className="btn-text">Log in</span>
+                  <FlipText>Log in</FlipText>
                 </Link>
               </div>
             </div>

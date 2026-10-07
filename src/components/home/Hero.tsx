@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import CircleProgress from "@/components/ui/CircleProgress";
+import FlipText from "@/components/ui/FlipText";
 
 export default function Hero() {
   return (
@@ -15,11 +16,11 @@ export default function Hero() {
           </div>
           <div className="btn-area">
             <Link className="tj-btn-primary flip-text-wrap" href="/courses">
-              <span className="btn-text">Start learning free</span>
+              <FlipText>Start learning free</FlipText>
               <span className="btn-icon"><i className="tji-arrow-right-2" /></span>
             </Link>
             <Link className="tj-btn-primary tj-btn-primary-light flip-text-wrap" href="/courses">
-              <span className="btn-text">Explore courses</span>
+              <FlipText>Explore courses</FlipText>
               <span className="btn-icon"><i className="tji-arrow-right-2" /></span>
             </Link>
           </div>

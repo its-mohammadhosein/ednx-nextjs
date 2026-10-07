@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { events } from "@/data/events";
+import FlipText from "@/components/ui/FlipText";
 
 export default function Events() {
   return (
@@ -38,7 +39,7 @@ export default function Events() {
                 </div>
                 <div>
                   <Link className="tj-btn-primary flip-text-wrap" href={`/events/${event.slug}`}>
-                    <span className="btn-text">Book seat now</span>
+                    <FlipText>Book seat now</FlipText>
                     <span className="btn-icon"><i className="tji-arrow-right-2" /></span>
                   </Link>
                 </div>

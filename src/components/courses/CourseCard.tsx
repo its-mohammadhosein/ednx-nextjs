@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Course } from "@/data/courses";
+import FlipText from "@/components/ui/FlipText";
 
 export default function CourseCard({ course }: { course: Course }) {
   return (
@@ -48,7 +49,7 @@ export default function CourseCard({ course }: { course: Course }) {
           </div>
         </div>
         <Link className="tj-btn-primary tj-btn-primary-md tj-btn-full flip-text-wrap" href={`/courses/${course.slug}`}>
-          <span className="btn-text">Start learning</span>
+          <FlipText>Start learning</FlipText>
           <span className="btn-icon"><i className="tji-arrow-right-2" /></span>
         </Link>
       </div>

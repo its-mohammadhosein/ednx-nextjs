@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import FlipText from "@/components/ui/FlipText";
 
 export default function About() {
   return (
@@ -43,11 +44,11 @@ export default function About() {
               </div>
               <div className="btn-area">
                 <Link className="tj-btn-primary flip-text-wrap" href="/courses">
-                  <span className="btn-text">Start learning free</span>
+                  <FlipText>Start learning free</FlipText>
                   <span className="btn-icon"><i className="tji-arrow-right-2" /></span>
                 </Link>
                 <Link className="tj-btn-primary tj-btn-primary-light flip-text-wrap" href="/courses">
-                  <span className="btn-text">Explore courses</span>
+                  <FlipText>Explore courses</FlipText>
                   <span className="btn-icon"><i className="tji-arrow-right-2" /></span>
                 </Link>
               </div>

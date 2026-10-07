@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper";
 import { instructors } from "@/data/instructors";
+import FlipText from "@/components/ui/FlipText";
 
 export default function Instructors() {
   const swiperRef = useRef<SwiperType | null>(null);
@@ -69,7 +70,7 @@ export default function Instructors() {
                     </div>
                     <div className="btn-area">
                       <Link className="tj-btn-primary tj-btn-full flip-text-wrap" href={`/instructors/${instructor.slug}`}>
-                        <span className="btn-text">See profile</span>
+                        <FlipText>See profile</FlipText>
                         <span className="btn-icon"><i className="tji-arrow-right-2" /></span>
                       </Link>
                     </div>

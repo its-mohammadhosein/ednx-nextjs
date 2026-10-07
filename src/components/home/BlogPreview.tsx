@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { blogPosts } from "@/data/blog-posts";
+import FlipText from "@/components/ui/FlipText";
 
 export default function BlogPreview() {
   return (
@@ -11,7 +12,7 @@ export default function BlogPreview() {
           <div className="sec-heading-inner">
             <h2 className="sec-title">Explore Latest Blog and Insights.</h2>
             <Link className="tj-btn-primary flip-text-wrap" href="/blog">
-              <span className="btn-text">See more blogs</span>
+              <FlipText>See more blogs</FlipText>
               <span className="btn-icon"><i className="tji-arrow-right-2" /></span>
             </Link>
           </div>
@@ -39,7 +40,7 @@ export default function BlogPreview() {
                 </h3>
                 <div className="blog-btn">
                   <Link className="tj-text-btn flip-text-wrap" href={`/blog/${post.slug}`}>
-                    <span className="btn-text">Read more</span>
+                    <FlipText>Read more</FlipText>
                     <span className="btn-icon"><i className="tji-arrow-right-2" /></span>
                   </Link>
                 </div>
