@@ -39,7 +39,9 @@ export default function AboutFaq() {
             </div>
           </div>
           <div className="lg:w-7/12 xl:w-8/12">
-            <FaqAccordion items={faqItems} id="tjAccordion01" />
+            <div className="tj-faq-wrapper">
+              <FaqAccordion items={faqItems} id="tjAccordion01" />
+            </div>
           </div>
         </div>
       </div>
