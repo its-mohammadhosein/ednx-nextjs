@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Course } from "@/data/courses";
 import FlipText from "@/components/ui/FlipText";
+import SingleRating from "@/components/ui/SingleRating";
 
 export default function CourseCard({ course }: { course: Course }) {
   return (
@@ -40,10 +41,7 @@ export default function CourseCard({ course }: { course: Course }) {
           <span><i className="tji-user-duo" />{course.students}</span>
         </div>
         <div className="tj-course-price-wrap">
-          <div className="single-rating">
-            <i className="tji-star" />
-            <span className="label">{course.rating}<span>({course.ratingCount})</span></span>
-          </div>
+          <SingleRating rating={course.rating} count={course.ratingCount} />
           <div className="course-price tj-fs-h6">
             {course.originalPrice && <del>{course.originalPrice}</del>} {course.price}
           </div>

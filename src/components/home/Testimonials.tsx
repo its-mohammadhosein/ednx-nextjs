@@ -1,11 +1,10 @@
 "use client";
 
 import { useRef } from "react";
-import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper";
 import { testimonials } from "@/data/testimonials";
-import StarRating from "@/components/ui/StarRating";
+import TestimonialCard from "@/components/testimonials/TestimonialCard";
 
 export default function Testimonials() {
   const swiperRef = useRef<SwiperType | null>(null);
@@ -40,24 +39,7 @@ export default function Testimonials() {
           >
             {testimonials.map((t) => (
               <SwiperSlide key={t.authorName}>
-                <div className={`tj-testimonial-item ${t.themeClass}`}>
-                  <div className="tj-testimonial-top">
-                    <div className="tj-quote"><i className="tji-quote" /></div>
-                    <StarRating rating={t.rating} />
-                  </div>
-                  <div className="desc"><p>“{t.quote}”</p></div>
-                  <div className="tj-testimonial-bottom">
-                    <div className="author-wrap">
-                      <div className="author-avatar">
-                        <Image src={t.authorImage} alt="" width={48} height={48} />
-                      </div>
-                      <div className="author-info">
-                        <h3 className="name tj-fs-h6">{t.authorName}</h3>
-                        <span className="designation">{t.designation}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <TestimonialCard testimonial={t} />
               </SwiperSlide>
             ))}
           </Swiper>
