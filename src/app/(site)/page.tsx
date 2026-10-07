@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "swiper/css";
-import "./home.css";
 import Hero from "@/components/home/Hero";
 import ClientLogos from "@/components/home/ClientLogos";
 import Categories from "@/components/home/Categories";
